@@ -440,6 +440,7 @@ EOF;
                 'react' => '^17.0.1',
                 'react-dom' => '^17.0.1',
                 '@babel/preset-react' => '^7.12.13',
+                'classnames' => '^2.2.6',
             ] + $packages;
         });
 
