@@ -207,7 +207,7 @@ export default function AppLayout({ header, children}) {
 
                                 {/*Team Management*/}
                                 {page.props.jetstream.hasTeamFeatures && (
-                                    <React.Fragment>
+                                    <>
                                         <div className="border-t border-gray-200"></div>
 
                                         <div className="block px-4 py-2 text-xs text-gray-400">
@@ -242,8 +242,7 @@ export default function AppLayout({ header, children}) {
                                                 </JetResponsiveNavLink>
                                             </form>
                                         ))}
-                                    </React.Fragment>
-
+                                    </>
                                 )}
                             </div>
                         </div>
