@@ -166,7 +166,7 @@ export default function AppLayout({ header, children}) {
                     </div>
 
                     {/*Responsive Navigation Menu*/}
-                    <div className={{'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown, 'sm:hidden': true}}>
+                    <div className={classNames({'block': showingNavigationDropdown, 'hidden': ! showingNavigationDropdown, 'sm:hidden': true})}>
                         <div className="pt-2 pb-3 space-y-1">
                             <JetResponsiveNavLink href={route('dashboard')} active={route().current('dashboard')}>
                                 Dashboard
