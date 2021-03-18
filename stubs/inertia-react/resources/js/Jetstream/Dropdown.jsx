@@ -44,7 +44,6 @@ export default function Dropdown({ align = 'right', width = '48', contentClasses
                     <>
                         <div
                             className={classNames('absolute z-50 mt-2 rounded-md shadow-lg', [widthClass(width), alignmentClasses(align)])}
-                            style={{display: 'none'}}
                             onClick={() => setOpen(false)}>
                             <div className={classNames('rounded-md ring-1 ring-black ring-opacity-5', [contentClasses])}>
                                 {children}
