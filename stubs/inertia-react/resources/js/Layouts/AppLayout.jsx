@@ -17,10 +17,6 @@ function switchToTeam(team) {
     })
 }
 
-function logout() {
-    Inertia.post(route('logout'));
-}
-
 export default function AppLayout({ header, children}) {
     const page = usePage();
     const [showingNavigationDropdown, setShowingNavigationDropdown] = useState(false);
@@ -144,11 +140,9 @@ export default function AppLayout({ header, children}) {
                                         <div className="border-t border-gray-100"></div>
 
                                         {/*Authentication*/}
-                                        <form onSubmit={() => logout()}>
-                                            <JetDropdownLink as="button">
-                                                Log Out
-                                            </JetDropdownLink>
-                                        </form>
+                                        <JetDropdownLink href={route('logout')} method="post">
+                                            Log Out
+                                        </JetDropdownLink>
                                     </JetDropdown>
                                 </div>
                             </div>
@@ -200,11 +194,9 @@ export default function AppLayout({ header, children}) {
                                 )}
 
                                 {/*Authentication*/}
-                                <form method="POST" onSubmit={logout}>
-                                    <JetResponsiveNavLink as="button">
-                                        Log Out
-                                    </JetResponsiveNavLink>
-                                </form>
+                                <JetResponsiveNavLink href={route('logout')} method="post">
+                                    Log Out
+                                </JetResponsiveNavLink>
 
                                 {/*Team Management*/}
                                 {page.props.jetstream.hasTeamFeatures && (
