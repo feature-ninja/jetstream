@@ -136,9 +136,9 @@ export default function AppLayout({ header, children}) {
                                         </JetDropdownLink>
 
                                         {page.props.jetstream.hasApiFeatures && (
-                                        <JetDropdownLink href={route('api-tokens.index')}>
-                                            API Tokens
-                                        </JetDropdownLink>
+                                            <JetDropdownLink href={route('api-tokens.index')}>
+                                                API Tokens
+                                            </JetDropdownLink>
                                         )}
 
                                         <div className="border-t border-gray-100"></div>
